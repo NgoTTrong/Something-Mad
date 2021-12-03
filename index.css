@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100vh;
+}
+body{
+    background: radial-gradient(#f953c6,#b91d73);
+    margin: 0;
+}
+.overlay_text{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    color:#e4066e;
+    font-family: 'Gwendolyn', cursive;
+}
+.overlay_text.visible{
+    display: flex;
+    z-index: 100;
+    flex-direction: column;
+    animation: overlay_grow 1s forwards;
+}
+@keyframes overlay_grow {
+    from{
+        background-color: rgba(21, 224, 146, 0);
+        font-size: 0;
+    }
+    to{
+        background-color: rgba(233, 172, 213,1);
+        font-size: 10em;
+    }
+}
+.overlay_text .letter{
+    font-family: 'Gwendolyn', cursive;
+    color:#e4066e ;
+    text-align: center;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+.overlay_text .question_container{
+    margin: 100px;
+    width: 1000px;
+    height: 500px;
+    background-color: transparent;
+    position: relative;
+}
+.overlay_text .question_container .btn{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    background-color: white;
+    padding-top: 30px;
+    font-family: 'Gwendolyn', cursive;
+    font-size: 30px;
+    border-radius: 20px;
+    margin:30px 30px;
+    position: absolute;
+}
+.overlay_text .question_container .btn.agree_button{
+    top:0;
+    left:25%;
+}
+.overlay_text .question_container .btn.reject_button{
+    top:0;
+    left:50%;
+}
+.overlay_text .question_container .btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+
+
+
+
+.letter{
+    font-family: 'Gwendolyn', cursive;
+    color:#a0e2f7 ;
+    text-align: center;
+    font-weight: normal;
+    font-size: 6em;
+}
+.question_container{
+    margin: 100px;
+    width: auto;
+    height: 500px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+.question_container .btn{
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    background-color: white;
+    padding-top: 30px;
+    font-family: 'Gwendolyn', cursive;
+    font-size: 30px;
+    border-radius: 20px;
+    margin:30px 30px;
+}
+
+.question_container .btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
